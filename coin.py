@@ -2,7 +2,7 @@
 Match Coins game
 Sarah Estes
 To stimulate a coin matching game
-Standard Python Library used, Random
+Standard Python Library used, Random Module
 9/25/26
 """
 
