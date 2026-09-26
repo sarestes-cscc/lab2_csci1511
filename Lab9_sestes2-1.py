@@ -46,11 +46,7 @@ def main(player1, player2):
             player1_score = player1.get_wallet()
             player2_score = player2.get_wallet()
 
-            if player1_score == 0:
-                play_condition = False
-                print("\n--- Game Over ---")
-
-            if player2_score == 0:
+            if player1_score == 0 or player2_score == 0:
                 play_condition = False
                 print("\n--- Game Over ---")
 
