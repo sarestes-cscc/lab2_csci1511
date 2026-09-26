@@ -28,4 +28,4 @@ class Coin:
         
     def get_sideup(self):
         __sideup = self.__sideup
-        print(f"\n{__sideup}")
+        return __sideup
