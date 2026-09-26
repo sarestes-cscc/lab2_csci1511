@@ -9,6 +9,9 @@ Standard Python Library used, Random
 from player import Player
 
 def main(player1, player2):
+    """
+    Coin Match Game program
+    """
     player1 = Player("Player1")
     player2 = Player("Player2")
 

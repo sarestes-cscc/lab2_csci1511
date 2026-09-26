@@ -15,10 +15,11 @@ class Coin:
     """
 
     def __init__(self):
-        """Initialize attributes for the coin"""
+        """ Initialize attributes for the coin """
         self.__sideup = "Heads" or "Tails"
 
     def toss(self):
+        """ Simulate coin toss """
         random_number = randint(1, 2)
         if random_number == 1:
             self.__sideup = "Heads"
@@ -27,5 +28,6 @@ class Coin:
         return self.__sideup
         
     def get_sideup(self):
+        """ Gets heads or tails value from coin toss """
         __sideup = self.__sideup
         return __sideup
