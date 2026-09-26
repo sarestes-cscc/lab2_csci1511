@@ -27,8 +27,7 @@ class Player:
 
     def get_coin_side(self):
         """ Gets the side of the player's coin """
-        self.__coin.get_sideup()
-        return self.__coin
+        return self.__coin.get_sideup()
 
     def win_coin(self):
         """ Adds 1 to wallet """
@@ -49,5 +48,3 @@ class Player:
         """ Returns current value of name """
         __name = self.__name
         return __name
-
-    

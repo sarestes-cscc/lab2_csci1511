@@ -22,7 +22,7 @@ class Coin:
         random_number = randint(1, 2)
         if random_number == 1:
             self.__sideup = "Heads"
-        else:
+        if random_number == 2:
             self.__sideup = "Tails"
         return self.__sideup
         

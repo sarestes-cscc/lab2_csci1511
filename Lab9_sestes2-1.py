@@ -59,5 +59,3 @@ def main(player1, player2):
         print("Player 2 wins!")
 
 main("Sarah", "Quintin")
-
-
