@@ -17,7 +17,7 @@ def main(player1, player2):
     print("--- Coin Match Game ---")
 
     while play_condition:
-        print(f"Player 1 has {player1.get_wallet()} coins.")
+        print(f"\nPlayer 1 has {player1.get_wallet()} coins.")
         print(f"Player 2 has {player2.get_wallet()} coins.")
         want_to_play = input("\nDo you want to toss the coins? (y/n): ")
 
@@ -35,10 +35,25 @@ def main(player1, player2):
             if player1_coin == player2_coin:
                 print("...It's a match! Player 1 wins a coin.")
                 player1.win_coin()
+                player2.lose_coin()
 
             if player1_coin != player2_coin:
                 print("...No Match! Player 2 wins a coin.")
+                player1.lose_coin()
                 player2.win_coin()
+
+            player1_score = player1.get_wallet()
+            player2_score = player2.get_wallet()
+
+            if player1_score == 0:
+                play_condition = False
+                print("\n--- Game Over ---")
+                print("Player 1 loses.")
+
+            if player2_score == 0:
+                play_condition = False
+                print("\n--- Game Over ---")
+                print("Player 2 loses.")
 
         if want_to_play == "n":
             play_condition = False
@@ -58,4 +73,4 @@ def main(player1, player2):
     else:
         print("Player 2 wins!")
 
-main("Sarah", "Quintin")
+main("Player 1", "Player 2")
