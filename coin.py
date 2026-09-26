@@ -18,5 +18,14 @@ class Coin:
         """Initialize attributes for the coin"""
         self.__sideup = "Heads" or "Tails"
 
-    def toss():
-
+    def toss(self):
+        random_number = randint(1, 2)
+        if random_number == 1:
+            self.__sideup = "Heads"
+        else:
+            self.__sideup = "Tails"
+        return self.__sideup
+        
+    def get_sideup(self):
+        __sideup = self.__sideup
+        print(f"\n{__sideup}")
