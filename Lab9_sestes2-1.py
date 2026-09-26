@@ -19,6 +19,7 @@ def main(player1, player2):
     while play_condition:
         print(f"\nPlayer 1 has {player1.get_wallet()} coins.")
         print(f"Player 2 has {player2.get_wallet()} coins.")
+        
         want_to_play = input("\nDo you want to toss the coins? (y/n): ")
 
         if want_to_play == "y":
@@ -26,7 +27,7 @@ def main(player1, player2):
 
             player1.toss_coin()
             player1_coin = player1.get_coin_side()
-            print(f"Player 1 tossed {player1_coin}.")
+            print(f"\nPlayer 1 tossed {player1_coin}.")
 
             player2.toss_coin()
             player2_coin = player2.get_coin_side()
@@ -48,15 +49,16 @@ def main(player1, player2):
             if player1_score == 0:
                 play_condition = False
                 print("\n--- Game Over ---")
-                print("Player 1 loses.")
 
             if player2_score == 0:
                 play_condition = False
                 print("\n--- Game Over ---")
-                print("Player 2 loses.")
 
         if want_to_play == "n":
             play_condition = False
+
+        if want_to_play != "y" and want_to_play != "n":
+            print("\nPlease try again and enter valid input.")
 
     print("\n--- Final Score ---")
 
